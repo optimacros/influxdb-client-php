@@ -80,7 +80,7 @@ class DefaultApi
             }
 
             //execute post call
-            $response = $this->http->requestAsync($method, $uriPath, $options)->wait();
+            $response = $this->http->request($method, $uriPath, $options);
 
             $statusCode = $response->getStatusCode();
 
