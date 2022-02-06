@@ -153,7 +153,7 @@ class WriteApi extends DefaultApi implements Writer
             $this->worker()->flush();
         }
 
-        unset($this->worker);
+        $this->worker = null;
     }
 
     private function worker(): Worker
